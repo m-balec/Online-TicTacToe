@@ -15,6 +15,12 @@ class DbAccess {
             if (err) throw err;
             console.log('Connected to database');
         });
+
+        // var sql = 'CREATE TABLE gameRoom (roomID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, roomName VARCHAR(255), players JSON, squares JSON, turns JSON)';
+        // this.con.query(sql, (err, result) => {
+        //     if (err) throw err;
+        //     console.log('Table Created');
+        // });
     }
 
     // Function to find gameRoom using the roomName
@@ -58,7 +64,7 @@ class DbAccess {
         }
 
         // Add new record to 'gameRoom' table
-        let createRoomSQL = `INSERT INTO gameRoom (roomID, roomName, players, squares, turns) VALUES ('1', '${roomName}', '${JSON.stringify(playersObj)}', '${JSON.stringify(squaresObj)}', '${JSON.stringify(turnsObj)}')`;
+        let createRoomSQL = `INSERT INTO gameRoom (roomID, roomName, players, squares, turns) VALUES (NULL, '${roomName}', '${JSON.stringify(playersObj)}', '${JSON.stringify(squaresObj)}', '${JSON.stringify(turnsObj)}')`;
         this.con.query(createRoomSQL, (err, result) => {
             if (err) throw err;
             console.log(`Room ${roomName} has been created successfully.`);

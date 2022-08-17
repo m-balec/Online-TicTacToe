@@ -22,12 +22,6 @@ const io = socketIo(server, {
 // connect to mySQL db
 const con = new DbAccess(process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, process.env.DB_NAME);
 
-// var sql = 'CREATE TABLE gameRoom (roomID INT, roomName VARCHAR(255), players JSON, squares JSON, turns JSON)';
-// con.query(sql, (err, result) => {
-//     if (err) throw err;
-//     console.log('Table Created');
-// });
-
 
 // Handle what to do upon client-connection to server
 io.on('connection', (socket) => {
