@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p {
+  background-color: blue;
+}
+
+#content {
+  margin-left: 10%;
+  background-image: linear-gradient(0, rgb(118, 118, 118), rgb(133, 133, 133));
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 2px;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+#player-id-display {
+  margin-bottom: 1rem;
+}
+
+.green {
+  background-color: green;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 7rem [col-start]);
+  column-gap: 0.7rem;
+  row-gap: 0.7rem;
+}
+
+.grid-item {
+  height: 7rem;
+  background-color: rgb(21, 21, 21);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 2px;
+  transition-duration: 300ms;
+}
+.grid-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.player1 {
+  background-image: linear-gradient(0, rgb(0, 113, 218), rgb(0, 132, 255));
+}
+
+.player2 {
+  background-image: linear-gradient(0, rgb(208, 21, 0), rgb(255, 25, 0));
+}
+
+.action-button {
+  background-color:rgb(0, 132, 255);
+  font-size: 1.1rem;
+  border: black 1px solid;
+  border-width: 1px 0px 1px 1px;
+  border-radius: 4px 0 0 4px;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+.action-button:hover {
+  background-color: rgb(0, 110, 214);
+  cursor: pointer;
+}
+
+.room-input-field {
+  font-size: 1.1rem;
+  border: black 1px solid;
+  border-radius: 0 4px 4px 0;
+  padding-left: 0.5rem;
+}
+
+.player-id {
+  font-size: large;
+}
+
+.no-click {
+  cursor: not-allowed;
+}
+.no-click:hover {
+  cursor: not-allowed;
+}
+
+.winner-display {
+  margin: 1rem 0rem 1rem 0;
+  font-size: 1.6rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.play-again-button {
+  background-color:rgb(195, 194, 198);
+
+  font-size: 1.4rem;
+  border: black 1px solid;
+  border-width: 1px;
+  border-radius: 2px;
+  margin: 1rem 0 0 0;
+
+  transition: all .2s ease-in-out;
+}
+.play-again-button:hover {
+  background-color: rgb(91, 48, 208);
+  /*
+  background-image: linear-gradient(45deg, rgb(0, 113, 218), rgb(120, 1, 147), rgb(208, 21, 0));
+  */
+  cursor: pointer;
+  transform: scale(1.075);
+}
